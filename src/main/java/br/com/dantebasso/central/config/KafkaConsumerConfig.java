@@ -13,7 +13,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 @RequiredArgsConstructor
 public class KafkaConsumerConfig {
     
-    private final WarehouseKafkaConfig warehouseKafkaConfig;
+    private final CentralKafkaConfig centralKafkaConfig;
     
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, DataMeasure> kafkaListenerContainerFactory(
