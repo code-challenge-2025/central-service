@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: central
+
+## CUSTOM
+
+warehouse:
+  kafka:
+    topic: code-challenge-2025
