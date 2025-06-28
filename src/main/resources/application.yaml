@@ -4,9 +4,20 @@ server:
 spring:
   application:
     name: central
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: warehouse-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.use.type.headers: false
+        spring.json.value.default.type: br.com.dantebasso.central.model.DataMeasure
+        spring.json.trusted.packages: "*"
 
 ## CUSTOM
 
 warehouse:
   kafka:
     topic: code-challenge-2025
+    groupId: warehouse-group
