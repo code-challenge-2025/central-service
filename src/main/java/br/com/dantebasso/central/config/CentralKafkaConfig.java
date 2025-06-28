@@ -5,9 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "warehouse.kafka")
+@ConfigurationProperties(prefix = "central.kafka")
 @Data
-public class WarehouseKafkaConfig {
+public class CentralKafkaConfig {
     
     private String topic;
 

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class DataMeasureConsumerServiceImpl implements DataMeasureConsumerService {
     
     @Override
-    @KafkaListener(topics = "#{@warehouseKafkaConfig.topic}", groupId = "#{@warehouseKafkaConfig.groupId}")
+    @KafkaListener(topics = "#{@centralKafkaConfig.topic}", groupId = "#{@centralKafkaConfig.groupId}")
     public void consume(DataMeasure dataMeasure) {
         log.info("Received message from Kafka: {}", dataMeasure);
     }
