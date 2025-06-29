@@ -20,7 +20,6 @@ spring:
 central:
   kafka:
     topic: code-challenge-2025
-    groupId: warehouse-group
   thresholds:
     temperature: 35
     humidity: 50
