@@ -49,9 +49,9 @@ public class MonitorServiceImpl implements MonitorService {
         if (dataMeasure.sensorValue() > centralThresholdsConfig.getHumidity()) {
             final String message =
                     String.format(
-                            "Sensor '%s' exceeded the temperature limit of '%s', reaching '%s' (Date/Time: %s)",
+                            "Sensor '%s' exceeded the humidity limit of '%s', reaching '%s' (Date/Time: %s)",
                             dataMeasure.sensorId(),
-                            centralThresholdsConfig.getTemperature(),
+                            centralThresholdsConfig.getHumidity(),
                             dataMeasure.sensorValue(),
                             dataMeasure.metadata().get(METADATA_KEY_UTC_TIME)
                     );

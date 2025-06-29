@@ -10,7 +10,5 @@ import org.springframework.stereotype.Component;
 public class CentralKafkaConfig {
     
     private String topic;
-
-    private String groupId;
     
 }
